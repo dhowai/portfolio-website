@@ -18,7 +18,7 @@ const scaleVariants = {
 const Header = () => {
   return (
     <div id="home" className="app__header app__flex">
-      <motion.dev
+      <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="app__header-info"
@@ -35,7 +35,7 @@ const Header = () => {
             <p className="p-text">Front-end Developer</p>
           </div>
         </div>
-      </motion.dev>
+      </motion.div>
 
       <motion.div
         whileInView={{ opacity: [0, 1] }}
@@ -57,7 +57,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {[images.html, images.react, images.css].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle${index}`}>
             <img src={circle} alt="circle" />
           </div>
