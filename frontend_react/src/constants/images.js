@@ -30,7 +30,7 @@ import about3 from "../assets/about3.jpg";
 import profile from "../assets/profile.png";
 import profile1 from "../assets/profile1.png";
 
-import circle from "../assets/circle.svg";
+import circle from "../assets/circle.png";
 import logo from "../assets/logo.png";
 
 import adidas from "../assets/adidas.png";
