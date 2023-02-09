@@ -29,7 +29,7 @@ const About = () => {
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: "tween" }}
+            transition={{ type: "spring", stiffness: 100 }}
             className="app__profile-item"
             key={about.title + index}
           >
