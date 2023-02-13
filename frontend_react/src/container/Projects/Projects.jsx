@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
-import "./Work.scss";
+import "./Projects.scss";
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -40,7 +40,7 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> Section
+        My Creative <span>Projects</span> Section
       </h2>
 
       <div className="app__work-filter">
@@ -139,6 +139,6 @@ const Work = () => {
 
 export default AppWrap(
   MotionWrap(Work, "app__works"),
-  "work",
+  "projects",
   "app__primarybg"
 );
