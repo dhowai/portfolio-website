@@ -14,7 +14,7 @@ const Work = () => {
   const [filterWork, setFilteredWork] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "projects"]';
 
     client.fetch(query).then((data) => {
       setWorks(data);
@@ -40,7 +40,7 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Projects</span> Section
+        My Creative <span>Portfolio</span> Section
       </h2>
 
       <div className="app__work-filter">
