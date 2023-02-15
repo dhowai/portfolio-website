@@ -96,11 +96,26 @@ The live link can be found here: https://daryl-portfolio.netlify.app/
 - This lets the visitor know that I have more projects in the works.
 - <img width="50%" src="src/assets/readme/proj-filter-2.gif">
 
+<br/>
+
+- Contact Me
+
+- This section is a way for the visitor to get in touch with me by having my contact details.
+- My email and phone number are clickable links that redirect accordingly.
+- There's also a form element that the visitor can leave their details and this data is sent to the sanity backend which I can view.
+
+<img width="50%" src="src/assets/readme/contact.gif">
+
+<br/>
+
 [Back to Top](#table-of-contents)
 
 ## Features left to Implement
 
 - Possible features to add in future updates:
+
+- Have the form data be sent to my personal email using emailJs.
+- Get data from co-workers to fill out the testimonial section which is currently not being implemented.
 
 [Back to Top](#table-of-contents)
 
@@ -108,13 +123,27 @@ The live link can be found here: https://daryl-portfolio.netlify.app/
 
 # Bugs
 
+-
+
 ## Bugs Solved
 
 ---
 
 # Deployment
 
-The master branch of this repository has been used for the deployment version of this project.
+The build folder was generated and used to deploy this project to Netify.
+
+## Visual Studio Code
+
+- This project was created locally using Visual Studio Code and used git to connect the local files to the github repository on my account.
+- When commiting any file changes both the local and online codebase was updated.
+- A quick setup to acheive this:
+  - Create a repositry on github and a new folder in your local Visual Studio Code
+  - In your local workspace terminal type `git init`
+  - Then `git add .` and `git commit -m "first commit"`
+  - Then `git branch -M main`
+  - Then `git remote add origin https://github.com/username/reponame.git`
+  - Finally `git push -u origin main`
 
 ## Github and Gitpod
 
@@ -138,6 +167,8 @@ The master branch of this repository has been used for the deployment version of
 
 ## Sanity
 
+- Sanity was used to create the backend for this project.
+
 ## Deployment to Netify
 
 [Back to Top](#table-of-contents)
@@ -149,6 +180,7 @@ The master branch of this repository has been used for the deployment version of
 ## Media
 
 - [Unsplash](https://unsplash.com/) for homepage image.
+- [Ezgif](https://ezgif.com/maker) to create the gifs.
 
 # Acknowledgements
 
