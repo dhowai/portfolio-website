@@ -13,6 +13,7 @@ The live link can be found here: https://daryl-portfolio.netlify.app/
 # Table of Contents:
 
 - [Technologies Used](#technologies-used)
+- [React with Sanity](#react-with-sanity)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features left to implement](#features-left-to-implement)
@@ -46,6 +47,54 @@ The live link can be found here: https://daryl-portfolio.netlify.app/
 [Back to Top](#table-of-contents)
 
 ---
+
+## React with Sanity
+
+- Sanity was used to create the backend for this project.
+- Node and `npm` is needed to install the sanity package, using `npm create sanity@latest -- --coupon javascriptmastery2022` gives you double free monthly usage of 200k API requests, 1M API CDN requests and 20GB Bandwith.
+- Then login with either Google, Github or an e-mail.
+- Give the project a name and use the default dataset configuration.
+- Add a project output path which can be a folder in your workspace and select a project with no predefined schemas.
+- `npm run dev` in the console will take you to your sanity desk where all your data will be stored.
+- The next step is to define your schemas that you want your site to have. In the schema folder add your file.js and the file structure you expect to export e.g:
+
+```
+name:'filename',
+title:'filetitle',
+type: 'document',
+fields:[
+    {
+        name:'name',
+        title:'Name',
+        type: 'string'
+    }
+```
+
+- Then in the index.js in the schemas folder import the file `import filename from './filename` and use `export const schemaTypes = [file]` to use the schema.
+- Running `npm run dev` again will show the schema in the sanity desk and you can add your data from there using the fields specified.
+
+- The JavaScript React library was used to create the frontend for this project.
+- `npm create-react-app my-app` installs the basic file structure for the project.
+- `npm install @sanity/client @sanity/image-url framer-motion node-sass react-icons` are all the dependecies used for this project.
+- Connecting sanity to react requires a client file in the frontend source folder with:
+
+  ```
+   import sanityClient from "@sanity/client"
+
+   export const client = sanityClient({
+   projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
+   dataset: "production",
+   apiVersion: "date",
+   useCdn: true,
+   token: process.env.REACT_APP_SANITY_TOKEN,
+   ignoreBrowserTokenWarning: true,
+   })
+
+  ```
+
+- The `REACT_APP_SANITY_PROJECT_ID` and `REACT_APP_SANITY_TOKEN` being secret variables that should be in the .env file.
+
+## [Back to Top](#table-of-contents)
 
 # Features
 
@@ -108,6 +157,18 @@ The live link can be found here: https://daryl-portfolio.netlify.app/
 
 <br/>
 
+- Higher Order Component wrappers
+
+- HOC were used for the social media icons, the navigational dots and the overall div using framer motion.
+- The idea for having a HOC is to reuse component logic and keeps the individual pages where its used more lean.
+- The wrappers are used by adding them to a page's export default expression.
+- The AppWrap.js holds the NavigationDots and SocialMedia components which can be seen on all sections.
+- The navigations got seen on the right of each section lets you know what section you're on and can click on the dots to move to the corresponding section.
+- <img  src="src/assets/readme/links.png"> <img  src="src/assets/readme/nav-dots.PNG">
+- The MotionWrap.js uses framer motion that replays all the animations in each sections when scrolled to or when clicked on.
+
+<br/>
+
 [Back to Top](#table-of-contents)
 
 ## Features left to Implement
@@ -130,8 +191,6 @@ The live link can be found here: https://daryl-portfolio.netlify.app/
 ---
 
 # Deployment
-
-The build folder was generated and used to deploy this project to Netify.
 
 ## Visual Studio Code
 
@@ -165,11 +224,12 @@ The build folder was generated and used to deploy this project to Netify.
   - In the terminal type 'git clone & then paste the link you copied in GitHub
   - Press enter and your local clone will be created.
 
-## Sanity
+## Deployment to Netlify
 
-- Sanity was used to create the backend for this project.
-
-## Deployment to Netify
+- `npm run build` command creates a full build of your application which then can be used to upload to netlify.
+- Uploading the build folder to netlify requires you to simply drag the build folder into the sites section.
+- It then gives you the option to edit your domain name.
+- It then takes you to the site's dashboard with the link to the live site.
 
 [Back to Top](#table-of-contents)
 
