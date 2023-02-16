@@ -1,6 +1,6 @@
 <h1 align="left">Portfolio Website</h1>
 
-<img src="src/assets/readme/responsive.png">
+<img src="src/assets/readme/responsive.PNG">
 
 This project was created to be my online work portfolio, displaying my attributes, skills and completed projects as a junior web developer.
 I used the JavaScript library called React to build this single page site along with the traditional front-end technologies such HTML, CSS and JavaScript.
