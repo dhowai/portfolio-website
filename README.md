@@ -164,7 +164,7 @@ fields:[
 - The wrappers are used by adding them to a page's export default expression.
 - The AppWrap.js holds the NavigationDots and SocialMedia components which can be seen on all sections.
 - The navigations got seen on the right of each section lets you know what section you're on and can click on the dots to move to the corresponding section.
-- <img  src="src/assets/readme/links.png"> <img  src="src/assets/readme/nav-dots.PNG">
+- <img  src="src/assets/readme/links.PNG"> <img  src="src/assets/readme/nav-dots.PNG">
 - The MotionWrap.js uses framer motion that replays all the animations in each sections when scrolled to or when clicked on.
 
 <br/>
